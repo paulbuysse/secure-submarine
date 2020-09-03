@@ -20,6 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import SecretsPage from '../SecretsPage/SecretsPage.js';
+import UserList from '../UserList/UserList.js';
 
 import './App.css';
 
@@ -92,6 +93,12 @@ class App extends Component {
               path="/home"
               component={LandingPage}
               authRedirect="/user"
+            />
+
+            <ProtectedRoute 
+            exact
+            path="/user/view/all"
+            component={UserList}
             />
 
             {/* If none of the other routes matched, we will show a 404. */}
